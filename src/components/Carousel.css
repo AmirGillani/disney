@@ -1,0 +1,72 @@
+/* Make the Swiper container take the full screen */
+.swiper-container {
+  width: 100vw;
+  height: 82vh;
+  position: relative; /* To ensure it's within the viewport */
+  overflow-x: hidden;
+}
+
+/* Ensure the image inside the swiper fills the screen */
+.swiper-slide-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Ensure the image covers the screen without distortion */
+}
+
+/* Custom Arrow Color */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #dfa221; /* Set arrow color */
+}
+
+/* Custom Pagination Dot Color */
+.swiper-pagination-bullet {
+  background-color: #ac8533; /* Set dot color */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ac8533; /* Active dot color */
+}
+
+/* Optional: Customize pagination dot size */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  /* Custom Pagination Dot Color */
+  .swiper-pagination-bullet {
+    display: none;
+  }
+
+  .swiper-pagination-bullet-active {
+    display: none;
+  }
+
+  /* Optional: Customize pagination dot size */
+  .swiper-pagination-bullet {
+    display: none;
+  }
+
+  .swiper-pagination-bullet-active {
+    display: none;
+  }
+}

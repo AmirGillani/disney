@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+
+/* CUSTOM FONT IMPORT */
+
+@font-face {
+  font-family: 'disney';
+  src: url('https://res.cloudinary.com/dhh9j0ion/raw/upload/v1736774122/Walter_qrbafa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
