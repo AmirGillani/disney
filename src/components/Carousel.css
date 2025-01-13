@@ -1,7 +1,7 @@
 /* Make the Swiper container take the full screen */
 .swiper-container {
   width: 100vw;
-  height: 82vh;
+  height: 100vh;
   position: relative; /* To ensure it's within the viewport */
   overflow-x: hidden;
 }

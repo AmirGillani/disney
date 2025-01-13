@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export function DropdownMenuCheckboxes() {
+export function DropdownMenuCheckboxes({button,links}) {
   const [showStatusBar, setShowStatusBar] = React.useState(true);
   const [showActivityBar, setShowActivityBar] = React.useState(false);
   const [showPanel, setShowPanel] = React.useState(false);
@@ -19,32 +19,20 @@ export function DropdownMenuCheckboxes() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button>Old Shows</button>
+        <button>{button}</button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 p-2  text-tangled rounded-none mt-10">
-        <DropdownMenuCheckboxItem
-          checked={showPanel}
-          onCheckedChange={setShowPanel}
-          className="text-xl"
-        >
-          Hannah Montana
-        </DropdownMenuCheckboxItem>
 
-        <DropdownMenuCheckboxItem
+        {
+          links.map((link)=>{ return <DropdownMenuCheckboxItem
           checked={showPanel}
           onCheckedChange={setShowPanel}
           className="text-xl"
         >
-          Wizards
-        </DropdownMenuCheckboxItem>
+          {link}
+        </DropdownMenuCheckboxItem>})
+        }
 
-        <DropdownMenuCheckboxItem
-          checked={showPanel}
-          onCheckedChange={setShowPanel}
-          className="text-xl"
-        >
-          That's So Raven
-        </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
